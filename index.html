@@ -60,7 +60,8 @@
     <h2>CHEAT PIALA88</h2>
     <p>Rungkadkan Semua B.O</p>
     <label>Nama ID:</label><br>
-    <input type="text" value="Andi ganteng"><br>
+    <!-- Input kosong, bisa diketik -->
+    <input type="text" placeholder="Masukkan ID"><br>
     <label>Pilih Provider:</label><br>
     <select>
       <option>PRAGMATIC PLAY</option>
@@ -120,7 +121,7 @@
     }
     setInterval(draw, 33);
 
-    // Progress bar
+    // Progress bar + redirect
     function startLoading() {
       document.getElementById("formBox").style.display = "none";
       document.getElementById("loadingBox").style.display = "block";
@@ -132,6 +133,8 @@
       let interval = setInterval(() => {
         if(progress >= 100) {
           clearInterval(interval);
+          // Redirect ke link setelah selesai
+          window.location.href = "https://piala88berkah.com";
         } else {
           progress += 4;
           bar.style.width = progress + "%";
