@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CHEAT PIALA88</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #00ffcc;
+      font-family: monospace;
+      text-align: center;
+    }
+    .box {
+      border: 2px solid #00ffcc;
+      padding: 20px;
+      width: 400px;
+      margin: 50px auto;
+      background: rgba(0, 0, 0, 0.8);
+    }
+    input, select, button {
+      margin: 10px;
+      padding: 10px;
+      width: 80%;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      background: #00ffcc;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    /* Progress bar */
+    .progress {
+      width: 80%;
+      background: #333;
+      margin: 20px auto;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 20px;
+      width: 0%;
+      background: #00aaff;
+      transition: width 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="box" id="formBox">
+    <h2>CHEAT PIALA88</h2>
+    <p>Rungkadkan Semua B.O</p>
+    <label>Nama ID:</label><br>
+    <input type="text" value="Andi ganteng"><br>
+    <label>Pilih Provider:</label><br>
+    <select>
+      <option>PRAGMATIC PLAY</option>
+      <option>HABANERO</option>
+      <option>PG SOFT</option>
+    </select><br>
+    <label>Fitur Tersedia:</label><br>
+    <select>
+      <option>AUTO MAXWIN</option>
+      <option>FREE SPIN</option>
+    </select><br>
+    <button onclick="startLoading()">PASANG</button>
+  </div>
+
+  <!-- Tampilan loading -->
+  <div class="box" id="loadingBox" style="display:none;">
+    <h2>CHEAT PIALA88</h2>
+    <p>Rungkadkan Semua B.O</p>
+    <p>Infiltrasi Database...</p>
+    <div class="progress">
+      <div class="progress-bar" id="bar"></div>
+    </div>
+    <p id="percent">0%</p>
+  </div>
+
+  <script>
+    function startLoading() {
+      document.getElementById("formBox").style.display = "none";
+      document.getElementById("loadingBox").style.display = "block";
+
+      let bar = document.getElementById("bar");
+      let percent = document.getElementById("percent");
+      let progress = 0;
+
+      let interval = setInterval(() => {
+        if(progress >= 100) {
+          clearInterval(interval);
+          // Redirect ke link setelah selesai
+          window.location.href = "https://piala88berkah.com";
+        } else {
+          progress += 4; // naik 4% tiap 300ms
+          bar.style.width = progress + "%";
+          percent.innerText = progress + "%";
+        }
+      }, 300);
+    }
+  </script>
+</body>
+</html>
