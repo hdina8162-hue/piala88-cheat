@@ -14,7 +14,9 @@
       position: fixed;
       top: 0;
       left: 0;
-      z-index: -1; /* supaya canvas jadi background */
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* canvas jadi background */
     }
     .box {
       border: 2px solid #00ffcc;
@@ -58,9 +60,8 @@
   <!-- Form CHEAT PIALA88 -->
   <div class="box" id="formBox">
     <h2>CHEAT PIALA88</h2>
-    <p>AKTIFKAN AKUN GACOR </p>
+    <p>AKTIFKAN AKUN GACOR</p>
     <label>Nama ID:</label><br>
-    <!-- Input kosong, bisa diketik -->
     <input type="text" placeholder="Masukkan ID"><br>
     <label>Pilih Provider:</label><br>
     <select>
@@ -91,16 +92,27 @@
     // Animasi Matrix
     const canvas = document.getElementById("matrix");
     const ctx = canvas.getContext("2d");
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
+
+    function resizeCanvas() {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
 
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
     const fontSize = 16;
-    const columns = canvas.width / fontSize;
+    let columns = canvas.width / fontSize;
     const drops = [];
-    for (let x = 0; x < columns; x++) {
-      drops[x] = 1;
+
+    function initDrops() {
+      columns = canvas.width / fontSize;
+      drops.length = 0;
+      for (let x = 0; x < columns; x++) {
+        drops[x] = 1;
+      }
     }
+    initDrops();
 
     function draw() {
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
@@ -133,7 +145,6 @@
       let interval = setInterval(() => {
         if(progress >= 100) {
           clearInterval(interval);
-          // Redirect ke link setelah selesai
           window.location.href = "https://piala88berkah.com";
         } else {
           progress += 4;
