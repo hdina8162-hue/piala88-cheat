@@ -9,6 +9,7 @@
       font-family: monospace;
       color: #00ffcc; /* neon cyan */
       text-align: center;
+      background: black;
     }
     canvas {
       position: fixed;
@@ -23,10 +24,14 @@
       padding: 20px;
       width: 400px;
       margin: 50px auto;
-      background: black; /* solid agar Matrix tidak tembus */
+      background: black;
       color: #00ffcc;
       /* Glow neon untuk box */
-      box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc
+      box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+    }
+    .box h2, .box p {
+      /* Glow neon untuk teks */
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
     }
     input, select, button {
       margin: 10px;
@@ -40,6 +45,8 @@
       color: black;
       font-weight: bold;
       cursor: pointer;
+      /* Glow neon untuk tombol */
+      box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
     }
     .progress {
       width: 80%;
@@ -47,12 +54,15 @@
       margin: 20px auto;
       border-radius: 5px;
       overflow: hidden;
+      box-shadow: 0 0 10px #00ffcc;
     }
     .progress-bar {
       height: 20px;
       width: 0%;
       background: #00aaff;
       transition: width 0.3s;
+      /* Glow neon untuk progress bar */
+      box-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
     }
   </style>
 </head>
@@ -123,11 +133,10 @@
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // gradient warna hacker style
       const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, "#00ff00"); // hijau neon
-      gradient.addColorStop(0.5, "#00ffff"); // cyan neon
-      gradient.addColorStop(1, "#ff00ff"); // ungu neon
+      gradient.addColorStop(0, "#00ff00");
+      gradient.addColorStop(0.5, "#00ffff");
+      gradient.addColorStop(1, "#ff00ff");
 
       ctx.fillStyle = gradient;
       ctx.font = fontSize + "px monospace";
@@ -144,7 +153,7 @@
     }
     setInterval(draw, 33);
 
-    // Progress bar + redirect ke piala88berkah.com
+    // Progress bar + redirect
     function startLoading() {
       document.getElementById("formBox").style.display = "none";
       document.getElementById("loadingBox").style.display = "block";
