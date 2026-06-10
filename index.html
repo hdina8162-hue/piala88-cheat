@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CHEAT SLOT PIALA88 dengan Matrix</title>
+  <title>WEB GOLDEN666 Hacker Style</title>
   <style>
     body {
       margin: 0;
       overflow: hidden;
       font-family: monospace;
-      color: #00ffcc;
+      color: #00ffcc; /* neon cyan */
       text-align: center;
     }
     canvas {
@@ -23,13 +23,8 @@
       padding: 20px;
       width: 400px;
       margin: 50px auto;
-      background: rgba(0, 0, 0, 0.8);
-    }
-    .gif-center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
+      background: black; /* solid agar Matrix tidak tembus */
+      color: #00ffcc;
     }
     input, select, button {
       margin: 10px;
@@ -60,12 +55,12 @@
   </style>
 </head>
 <body>
-  <!-- Background Matrix -->
+  <!-- Background Hacker Matrix -->
   <canvas id="matrix"></canvas>
 
-  <!-- Form CHEAT PIALA88 -->
+  <!-- Form GOLDEN666 -->
   <div class="box" id="formBox">
-    <h2>CHEAT SLOT PIALA88</h2>
+    <h2>WEB GOLDEN666</h2>
     <p>AKTIFKAN AKUN GACOR</p>
     <label>Nama ID:</label><br>
     <input type="text" placeholder="Masukkan ID"><br>
@@ -83,32 +78,21 @@
       <option>FREE SPIN</option>
     </select><br>
     <button onclick="startLoading()">PASANG</button>
-
-    <!-- GIF di tengah -->
-    <div class="gif-center">
-      <img src="https://www.gifcen.com/wp-content/uploads/2023/06/hacker-gif-2.gif" 
-           alt="Hacker GIF" width="250">
-    </div>
   </div>
 
   <!-- Tampilan loading -->
   <div class="box" id="loadingBox" style="display:none;">
-    <h2>CHEAT SLOT PIALA88</h2>
+    <h2>WEB GOLDEN666</h2>
     <p>AKTIFKAN AKUN GACOR</p>
     <p>Infiltrasi Database...</p>
     <div class="progress">
       <div class="progress-bar" id="bar"></div>
     </div>
     <p id="percent">0%</p>
-    <!-- GIF tetap muncul di loading -->
-    <div class="gif-center">
-      <img src="https://www.gifcen.com/wp-content/uploads/2023/06/hacker-gif-2.gif" 
-           alt="Hacker GIF" width="250">
-    </div>
   </div>
 
   <script>
-    // Animasi Matrix
+    // Animasi Matrix Hacker Background
     const canvas = document.getElementById("matrix");
     const ctx = canvas.getContext("2d");
 
@@ -119,7 +103,7 @@
     window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
 
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    const letters = "01"; // binary style hacker code
     const fontSize = 16;
     let columns = canvas.width / fontSize;
     const drops = [];
@@ -137,7 +121,13 @@
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = "#00ff00";
+      // gradient warna hacker style
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      gradient.addColorStop(0, "#00ff00"); // hijau neon
+      gradient.addColorStop(0.5, "#00ffff"); // cyan neon
+      gradient.addColorStop(1, "#ff00ff"); // ungu neon
+
+      ctx.fillStyle = gradient;
       ctx.font = fontSize + "px monospace";
 
       for (let i = 0; i < drops.length; i++) {
@@ -152,7 +142,7 @@
     }
     setInterval(draw, 33);
 
-    // Progress bar + redirect
+    // Progress bar + redirect ke golden666pro.com
     function startLoading() {
       document.getElementById("formBox").style.display = "none";
       document.getElementById("loadingBox").style.display = "block";
@@ -164,7 +154,7 @@
       let interval = setInterval(() => {
         if(progress >= 100) {
           clearInterval(interval);
-          window.location.href = "https://piala88berkah.com";
+          window.location.href = "https://golden666pro.com/";
         } else {
           progress += 4;
           bar.style.width = progress + "%";
